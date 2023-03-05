@@ -31,14 +31,14 @@ function addBookToLibrary(title, author, pagesNum, haveRead) {
 // Adding new book from form function
 
 function newBookCreate() {
-  const bookAdded = Object.create(Book, {
+  const bookAdded = new Book({
     title: newTitle.value,
     author: newAuthor.value,
     pagesNum: newPages.value,
     haveRead: newRead.value,
   });
   addBookToLibrary(bookAdded);
-  newBookCard();
+  console.log("book added");
 }
 
 // Creates new book obj and new card

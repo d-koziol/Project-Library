@@ -9,7 +9,7 @@ class Book {
   }
 }
 
-function addBookToLibrary(title, author, numOfPages, haveRead) {
-  const myBook = new Book(title, author, numOfPages, haveRead);
+function addBookToLibrary(title, author, pagesNum, haveRead) {
+  const myBook = new Book(title, author, pagesNum, haveRead);
   myLibrary.push(myBook);
 }

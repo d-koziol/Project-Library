@@ -19,7 +19,21 @@ header {
 }
 
 main {
+  display: grid;
   flex-grow: 1;
+  grid-template-columns: 1fr 5fr;
+  justify-content: space-around;
+}
+
+.card {
+  width: 15rem;
+  height: 15rem;
+  background-color: darkcyan;
+}
+
+.add-btn {
+  width: 10rem;
+  height: 4rem;
 }
 
 footer {

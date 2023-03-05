@@ -10,7 +10,6 @@
   <body>
     <header>
       <h1>Welcome to our Library</h1>
-      <button class="logBtn">Log In</button>
     </header>
 
     <main>
@@ -26,13 +25,15 @@
             id="inputAuthor"
             name="inputAuthor"
           />
-          <label for="" class="inputData">Pages: </label>
+          <label for="inputPages" class="inputData">Pages: </label>
           <input
             type="number"
             class="input"
             id="inputPages"
             name="inputPages"
           />
+          <label for="inputRead" class="inputData">Have read ? </label>
+          <input type="checkbox" name="inputRead" id="inputRead" />
           <input type="reset" value="Reset" id="resetBtn" />
           <input type="button" value="Submit" id="submitBtn" />
         </form>

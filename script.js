@@ -1,5 +1,7 @@
 let myLibrary = [];
+let bookAdded;
 
+let addBookForm = document.querySelector("addBookForm");
 class Book {
   constructor(title, author, pagesNum, haveRead) {
     this.title = title;

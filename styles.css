@@ -21,8 +21,18 @@ header {
 main {
   display: grid;
   flex-grow: 1;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 2fr 5fr;
   justify-content: space-around;
+  padding: 2rem;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 15% auto;
+  grid-template-rows: repeat(4, 2rem);
+  padding: 1rem;
+  row-gap: 0.5rem;
+  column-gap: 5px;
 }
 
 .card {
@@ -31,7 +41,7 @@ main {
   background-color: darkcyan;
 }
 
-.add-btn {
+.addBookBtn {
   width: 10rem;
   height: 4rem;
 }

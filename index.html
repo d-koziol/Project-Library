@@ -10,17 +10,40 @@
   <body>
     <header>
       <h1>Welcome to our Library</h1>
-      <button class="log-btn">Log In</button>
+      <button class="logBtn">Log In</button>
     </header>
 
     <main>
-      <button class="add-btn">+ Add new book</button>
-      <div class="card-container">
+      <div class="newBookAdd">
+        <button class="addBookBtn">Add Book +</button>
+        <form action="" class="addBookForm">
+          <label for="inputTitle" class="inputData">Title: </label>
+          <input type="text" class="input" id="inputTitle" name="inputTitle" />
+          <label for="inputAuthor" class="inputData">Author: </label>
+          <input
+            type="text"
+            class="input"
+            id="inputAuthor"
+            name="inputAuthor"
+          />
+          <label for="" class="inputData">Pages: </label>
+          <input
+            type="number"
+            class="input"
+            id="inputPages"
+            name="inputPages"
+          />
+          <input type="reset" value="Reset" id="resetBtn" />
+          <input type="button" value="Submit" id="submitBtn" />
+        </form>
+      </div>
+      <div class="cardContainer">
         <div class="card">
           <h2 class="title">The Witcher</h2>
           <h3 class="author">Sapkowski A.</h3>
           <h3 class="pagesNum">431</h3>
-          <p class="haveRead"><input type="checkbox" for="haveRead" /></p>
+          <p class="haveRead">Have Read ?</p>
+          <input type="checkbox" for="haveRead" />
         </div>
       </div>
     </main>

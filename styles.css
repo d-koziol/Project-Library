@@ -35,6 +35,13 @@ form {
   column-gap: 5px;
 }
 
+.libraryCards {
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  gap: 5px;
+}
+
 .card {
   width: 15rem;
   height: 15rem;

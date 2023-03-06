@@ -1,11 +1,11 @@
 /* eslint-disable quotes */
 
-// Node variables
+// DOM Selectors
 
 const myLibrary = [];
-let bookAdded;
 
-let addBookForm = document.getElementById("addBookForm");
+let addBookForm = document.querySelector(".addBookForm");
+let addBookBtn = document.querySelector(".addBookBtn");
 let newTitle = document.getElementById("inputTitle");
 let newAuthor = document.getElementById("inputAuthor");
 let newPages = document.getElementById("inputPages");
@@ -13,6 +13,9 @@ let newRead = document.getElementById("inputRead");
 let submitBtn = document.getElementById("submitBtn");
 let resetBtn = document.getElementById("resetBtn");
 
+addBookBtn.addEventListener("click", () => {
+  if (addBookForm) addBookForm.style.visibility = "visible";
+});
 // Book Class
 class Book {
   constructor(title, author, pagesNum, haveRead) {
@@ -23,24 +26,17 @@ class Book {
   }
 }
 
-function addBookToLibrary(title, author, pagesNum, haveRead) {
-  const myBook = new Book(title, author, pagesNum, haveRead);
+function addBookToLibrary() {
+  let title = newTitle.value;
+  let author = newAuthor.value;
+  let pagesNum = newPages.value;
+  let haveRead = newRead.checked;
+
+  let myBook = new Book(title, author, pagesNum, haveRead);
   myLibrary.push(myBook);
-}
-
-// Adding new book from form function
-
-function newBookCreate() {
-  const bookAdded = new Book({
-    title: newTitle.value,
-    author: newAuthor.value,
-    pagesNum: newPages.value,
-    haveRead: newRead.value,
-  });
-  addBookToLibrary(bookAdded);
-  console.log("book added");
+  console.log(myLibrary);
 }
 
 // Creates new book obj and new card
 
-submitBtn.addEventListener("click", newBookCreate);
+submitBtn.addEventListener("click", addBookToLibrary);

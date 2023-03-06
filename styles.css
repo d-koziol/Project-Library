@@ -46,6 +46,10 @@ form {
   height: 4rem;
 }
 
+.addBookForm {
+  visibility: hidden;
+}
+
 footer {
   display: flex;
   height: 5rem;

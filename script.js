@@ -23,6 +23,12 @@ class Book {
   }
 }
 
+// Function book delete
+function deleteBook(index) {
+  myLibrary.splice(index, 1);
+  library();
+}
+
 // Table iterate and new book card create function
 
 function library() {
@@ -37,6 +43,7 @@ function library() {
       <h3 class="author">${book.author}</h3>
       <h3 class="pagesNum">${book.pagesNum}</h3>
       <p class="haveRead">${book.haveRead ? "Read" : "Not Read Yet"}</p>
+      <input type="button" value="Delete Book" onclick="deleteBook(${i})"/>
     </div>
     `;
     libraryBook.appendChild(bookCard);

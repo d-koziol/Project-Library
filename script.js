@@ -23,6 +23,16 @@ class Book {
   }
 }
 
+//Toggle read function
+
+Book.prototype.toggleRead = function () {
+  this.haveRead = !this.haveRead;
+};
+
+function toggleRead(index) {
+  myLibrary[index].toggleRead();
+  library();
+}
 // Function book delete
 function deleteBook(index) {
   myLibrary.splice(index, 1);
@@ -39,11 +49,16 @@ function library() {
     let bookCard = document.createElement("div");
     bookCard.innerHTML = `
     <div class="card">
-      <h2 class="title">${book.title}</h2>
-      <h3 class="author">${book.author}</h3>
-      <h3 class="pagesNum">${book.pagesNum}</h3>
-      <p class="haveRead">${book.haveRead ? "Read" : "Not Read Yet"}</p>
-      <input type="button" value="Delete Book" onclick="deleteBook(${i})"/>
+      <div class="bookInfo">
+        <h2 class="title">${book.title}</h2>
+        <h3 class="author">${book.author}</h3>
+        <h3 class="pagesNum">${book.pagesNum}</h3>
+        <p class="haveRead">${book.haveRead ? "Read" : "Not Read Yet"}</p>
+      </div>
+      <div class="cardButtons">
+        <input type="button" class="deleteBtn" value="Delete Book" onclick="deleteBook(${i})"/>
+        <input type="button" class="toggleReadBtn" value="Toggle Read" onclick="toggleRead(${i})"/>
+      </div>
     </div>
     `;
     libraryBook.appendChild(bookCard);

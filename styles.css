@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Labrada:wght@300&family=Quicksand:wght@500&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +10,8 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  font-family: "Labrada", serif;
+  font-family: "Quicksand", sans-serif;
 }
 
 header {
@@ -28,7 +32,7 @@ main {
 
 form {
   display: grid;
-  grid-template-columns: 25% auto;
+  grid-template-columns: 30% auto;
   grid-template-rows: repeat(4, 2rem);
   padding: 1rem;
   row-gap: 0.5rem;
@@ -43,14 +47,45 @@ form {
 }
 
 .card {
+  display: grid;
   width: 15rem;
   height: 15rem;
-  background-color: darkcyan;
+  border: solid 5px #8865e7;
+  border-radius: 10px;
+  align-items: center;
+  justify-items: center;
+}
+
+.bookInfo {
+  display: grid;
+  gap: 5px;
+}
+
+.cardButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
 }
 
 .addBookBtn {
   width: 10rem;
   height: 4rem;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(95, 95, 236, 0.848) 0%,
+    rgb(67, 26, 192) 37%,
+    rgba(0, 59, 255, 0.9037990196078431) 100%
+  );
+  color: white;
+  font-size: larger;
+  font-weight: bolder;
+  border: none;
+  border-radius: 15px;
+}
+
+.addBookBtn:hover {
+  border: 5px solid #8865e7;
 }
 
 .addBookForm {

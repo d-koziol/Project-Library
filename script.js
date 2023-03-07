@@ -50,9 +50,9 @@ function library() {
     bookCard.innerHTML = `
     <div class="card">
       <div class="bookInfo">
-        <h2 class="title">${book.title}</h2>
-        <h3 class="author">${book.author}</h3>
-        <h3 class="pagesNum">${book.pagesNum}</h3>
+        <h2 class="title">Title: ${book.title}</h2>
+        <h3 class="author">Author: ${book.author}</h3>
+        <h3 class="pagesNum">Pages: ${book.pagesNum}</h3>
         <p class="haveRead">${book.haveRead ? "Read" : "Not Read Yet"}</p>
       </div>
       <div class="cardButtons">

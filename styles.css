@@ -20,6 +20,11 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.445);
+}
+
+h1 {
+  font-size: 45px;
 }
 
 main {
@@ -37,6 +42,12 @@ form {
   padding: 1rem;
   row-gap: 0.5rem;
   column-gap: 5px;
+}
+
+.addBookForm > input {
+  border: 2px solid rgba(0, 0, 0, 0.781);
+  padding: 0.5rem;
+  border-radius: 10px;
 }
 
 .libraryCards {
@@ -100,4 +111,5 @@ footer {
   justify-content: center;
   font-size: larger;
   font-weight: bolder;
+  border-top: 3px solid rgba(0, 0, 0, 0.445);
 }
